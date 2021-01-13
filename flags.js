@@ -9,7 +9,7 @@ function fetchFlag(country) {
                 const country = document.createElement("h2");
                 country.textContent = citiesData[0].name;
                 const population = document.createElement("p");
-                population.textContent = citiesData[0].population;
+                population.textContent ="Population: " + citiesData[0].population;
                 const flag = document.createElement("img");
                 flag.src = citiesData[0].flag;
                 flag.alt = "";

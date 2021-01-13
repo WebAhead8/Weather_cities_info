@@ -16,4 +16,4 @@ Khaled Badarna
 
 Mahmod
 
-To visit the website, click here.  
+To visit our website, click here: https://webahead8.github.io/Weather_cities_info/ 

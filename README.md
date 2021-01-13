@@ -9,8 +9,11 @@ Result anlaysis: the result box will show the country's flag belong to the locat
 the temprature (in both, fahrenheit and celsius) and the population number of that country. 
 
 Team members:
+
 Alaa lathqani
+
 Khaled Badarna
+
 Mahmod
 
 To visit the website, click here.  

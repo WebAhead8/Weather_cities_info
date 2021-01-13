@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Weather of cities</title>
+    <link rel="icon" href="pic/weather_icon.png" />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <h1>CITIES WEATHER AROUND THE WORLD</h1>
+    <div class="data">
+      <form>
+        <label for="city" class="city_name">Enter the name of the city:</label>
+        <input id="city" name="city" type="search" required />
+        <button type="submit">Search</button>
+
+        <output></output>
+      </form>
+    </div>
+    <script>
+      const form = document.querySelector("form");
+      const output = document.querySelector("output");
+
+      form.addEventListener("submit", (event) => {
+        // stop the form submitting and reloading the page
+        event.preventDefault();
+
+        // clear out any previous results
+        output.innerHTML = "";
+
+        // get the value of the field with name="city"
+        const formData = new FormData(event.target);
+        const name = formData.get("city");
+
+        fetch(
+          `https://cors-anywhere.herokuapp.com/http://api.weatherapi.com/v1/current.json?key=9865d5a7fd0645d788c152012211201&q=${name}`
+        )
+          .then((response) => {
+            if (!response.ok) throw new Error(response.status);
+            return response.json();
+          })
+          .then((weatherData) => {
+            const weatherC = document.createElement("p");
+            weatherC.textContent = weatherData.current.temp_c + " C";
+            const weatherF = document.createElement("p");
+            weatherF.textContent = weatherData.current.temp_f + " F";
+            const weatherIconText = document.createElement("p");
+            weatherIconText.textContent = weatherData.current.condition.text;
+            const weatherIcon = document.createElement("img");
+            weatherIcon.src = weatherData.current.condition.icon;
+            const windKph = document.createElement("p");
+            windKph.textContent = weatherData.current.wind_kph + " Kph";
+
+            output.appendChild(weatherC);
+            output.appendChild(weatherF);
+            output.appendChild(weatherIconText);
+            output.appendChild(weatherIcon);
+            output.appendChild(windKph);
+
+            let country = weatherData.location.country;
+            fetch(`https://restcountries.eu/rest/v2/name/${country}`)
+              .then((response) => {
+                if (!response.ok) throw new Error(response.status);
+                return response.json();
+              })
+              // if we get a successful response
+              .then((citiesData) => {
+                const country = document.createElement("h2");
+                country.textContent = citiesData[0].name;
+                const population = document.createElement("p");
+                population.textContent = citiesData[0].population;
+                const flag = document.createElement("img");
+                flag.src = citiesData[0].flag;
+                flag.alt = "";
+                flag.width = "250";
+                flag.height = "166.5";
+
+                output.appendChild(country);
+                output.appendChild(population);
+                output.appendChild(flag);
+              })
+              // if the request is unsuccessful
+              .catch((error) => {
+                console.log(error);
+                if (error.message === "404" || "400") {
+                  output.textContent = `⚠️ Couldn't find "${country}"`;
+                } else {
+                  output.textContent = "⚠️ Something went wrong";
+                }
+              });
+          })
+          .catch((error) => {
+            console.log(error);
+            if (error.message === "404" || "400") {
+              output.textContent = `⚠️ Couldn't find "${name}"`;
+            } else {
+              output.textContent = "⚠️ Something went wrong";
+            }
+          });
+      });
+    </script>
+    <footer>
+      <p class="authors">
+        <span>&#169; Copyright</span> Alaa, Mahmoud and Khaled - WebAhead 8
+        Bootcamp
+      </p>
+    </footer>
+  </body>
+</html>

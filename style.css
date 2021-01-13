@@ -53,6 +53,9 @@ output {
   justify-content: center;
   align-items: center;
   flex-direction: column;
+  color: red;
+  font-weight: bolder;
+  font-size: 24px;
 }
 
 p {

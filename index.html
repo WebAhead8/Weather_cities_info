@@ -15,43 +15,44 @@
         <input id="city" name="city" type="search" required />
         <button type="submit">Search</button>
 
-        <output></output><img id=imgIcon src="" alt=""><p id="temp_f"></p>
+        <output></output><img id="imgIcon" src="" alt="" />
+        <p id="temp_f"></p>
       </form>
+
+      <script src="./weather.js"></script>
+      <script src="./flags.js"></script>
     </div>
-    <script src="./flags.js"></script>
-    <script src="./weather.js"></script>
+
     <script src="./index.js"></script>
 
     <script>
-      
+      // fetch(
+      //   `https://cors-anywhere.herokuapp.com/http://api.weatherapi.com/v1/current.json?key=9865d5a7fd0645d788c152012211201&q=${name}`
+      // )
+      //   .then((response) => {
+      //     if (!response.ok) throw new Error(response.status);
+      //     return response.json();
+      //   })
+      //   .then((weatherData) => {
+      //     const weatherC = document.createElement("p");
+      //     weatherC.textContent = weatherData.current.temp_c + " C";
+      //     const weatherF = document.createElement("p");
+      //     weatherF.textContent = weatherData.current.temp_f + " F";
+      //     const weatherIconText = document.createElement("p");
+      //     weatherIconText.textContent = weatherData.current.condition.text;
+      //     const weatherIcon = document.createElement("img");
+      //     weatherIcon.src = weatherData.current.condition.icon;
+      //     const windKph = document.createElement("p");
+      //     windKph.textContent = weatherData.current.wind_kph + " Kph";
 
-        // fetch(
-        //   `https://cors-anywhere.herokuapp.com/http://api.weatherapi.com/v1/current.json?key=9865d5a7fd0645d788c152012211201&q=${name}`
-        // )
-        //   .then((response) => {
-        //     if (!response.ok) throw new Error(response.status);
-        //     return response.json();
-        //   })
-        //   .then((weatherData) => {
-        //     const weatherC = document.createElement("p");
-        //     weatherC.textContent = weatherData.current.temp_c + " C";
-        //     const weatherF = document.createElement("p");
-        //     weatherF.textContent = weatherData.current.temp_f + " F";
-        //     const weatherIconText = document.createElement("p");
-        //     weatherIconText.textContent = weatherData.current.condition.text;
-        //     const weatherIcon = document.createElement("img");
-        //     weatherIcon.src = weatherData.current.condition.icon;
-        //     const windKph = document.createElement("p");
-        //     windKph.textContent = weatherData.current.wind_kph + " Kph";
+      //     output.appendChild(weatherC);
+      //     output.appendChild(weatherF);
+      //     output.appendChild(weatherIconText);
+      //     output.appendChild(weatherIcon);
+      //     output.appendChild(windKph);
 
-        //     output.appendChild(weatherC);
-        //     output.appendChild(weatherF);
-        //     output.appendChild(weatherIconText);
-        //     output.appendChild(weatherIcon);
-        //     output.appendChild(windKph);
+      // let country = weatherData.location.country;
 
-            // let country = weatherData.location.country;
-            
       // });
     </script>
     <footer>

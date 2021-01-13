@@ -17,7 +17,7 @@ h1 {
 
 .data {
   margin: auto;
-  width: 25%;
+  width: 80%;
   height: 750px;
   border: 5px solid black;
   padding: 10px;
@@ -53,7 +53,7 @@ output {
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  color: red;
+  color: rgb(0, 0, 0);
   font-weight: bolder;
   font-size: 24px;
 }

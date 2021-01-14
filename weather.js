@@ -1,4 +1,5 @@
 function fetchWeather(name) {
+
   const form = document.querySelector("form");
   const output = document.querySelector("output");
   const temp_c = document.getElementById("temp_c");
@@ -26,3 +27,4 @@ function fetchWeather(name) {
       console.log(error);
     });
 }
+

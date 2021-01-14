@@ -11,10 +11,9 @@ function fetchFlag(country) {
       const population = document.createElement("p");
       population.textContent = "Population: " + citiesData[0].population;
       const flag = document.createElement("img");
+      flag.classList.add("imgFg");
       flag.src = citiesData[0].flag;
       flag.alt = "";
-      flag.width = "250";
-      flag.height = "166.5";
 
       output.appendChild(country);
       output.appendChild(population);

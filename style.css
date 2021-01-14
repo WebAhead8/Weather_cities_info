@@ -92,6 +92,11 @@ button {
   flex-direction: column;
 }
 
+.imgFg {
+  width: 250px;
+  height: 166.5px;
+}
+
 @media (max-width: 660px) {
   .data {
     width: 80%;

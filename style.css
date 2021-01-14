@@ -1,5 +1,5 @@
 body {
-  background-image: url(https://cdn.wallpapersafari.com/38/92/hFPNn9.jpg);
+  background-image: url(pic/bg_img.jpg);
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-size: cover;
@@ -12,18 +12,16 @@ h1 {
   margin-bottom: 10px;
   position: relative;
   top: 10px;
-  text-shadow: 2px 3px 2px rgb(255 255 255);
 }
 
 .data {
   margin: auto;
-  width: 80%;
-  height: 750px;
+  width: 60%;
+  height: 450px;
   border: 5px solid black;
   padding: 10px;
   position: relative;
   top: 10px;
-  border-radius: 4%;
 }
 
 .city_name {
@@ -40,6 +38,7 @@ h1 {
 }
 
 .authors {
+  color: black;
   margin-top: 35px;
   text-align: center;
 }
@@ -61,14 +60,12 @@ output {
 p {
   font-weight: bolder;
   font-size: 23px;
-  color: rgb(255, 255, 255);
-  text-shadow: 2px 3px 2px rgb(0, 0, 0);
+  color: black;
 }
 
 h2 {
   font-size: 30px;
-  color: rgb(255, 255, 255);
-  text-shadow: 2px 3px 2px rgb(0, 0, 0);
+  color: black;
 }
 
 input {
@@ -82,6 +79,11 @@ button {
   font-size: 20px;
   box-sizing: border-box;
   border-radius: 5%;
+}
+
+.data_div {
+  display: flex;
+  justify-content: space-around;
 }
 
 @media (max-width: 660px) {

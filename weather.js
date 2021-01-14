@@ -8,7 +8,6 @@ function fetchWeather() {
     // stop the form submitting and reloading the page
     event.preventDefault();
     // get the value of the field with name="city" from the form section
-    output.innerHTML = "";
 
     const name = document.querySelector("#city").value;
 

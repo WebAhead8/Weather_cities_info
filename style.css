@@ -51,6 +51,9 @@ output {
   justify-content: center;
   align-items: center;
   flex-direction: column;
+  color: rgb(0, 0, 0);
+  font-weight: bolder;
+  font-size: 24px;
 }
 
 p {
@@ -82,6 +85,13 @@ button {
   justify-content: space-around;
 }
 
+.divTemp {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
 @media (max-width: 660px) {
   .data {
     width: 80%;
@@ -111,14 +121,12 @@ button {
   p {
     font-weight: bolder;
     font-size: 23px;
-    color: rgb(255, 255, 255);
-    text-shadow: 2px 3px 2px rgb(0, 0, 0);
+    color: rgb(0, 0, 0);
   }
 
   h2 {
     font-size: 30px;
-    color: rgb(255, 255, 255);
-    text-shadow: 2px 3px 2px rgb(0, 0, 0);
+    color: rgb(0, 0, 0);
   }
 
   input {
@@ -132,5 +140,8 @@ button {
     font-size: 20px;
     box-sizing: border-box;
     border-radius: 5%;
+  }
+  .data_div {
+    display: block;
   }
 }

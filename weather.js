@@ -6,7 +6,7 @@ function fetchWeather(name) {
   const imgIcon = document.getElementById("imgIcon");
 
   fetch(
-    `http://api.weatherapi.com/v1/current.json?key=9865d5a7fd0645d788c152012211201&q=${name}`
+    `https://api.weatherapi.com/v1/current.json?key=9865d5a7fd0645d788c152012211201&q=${name}`
   )
     .then((response) => {
       return response.json();

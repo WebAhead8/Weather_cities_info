@@ -5,6 +5,7 @@ Cities weather information
 Description: using this website, you can extract the weather forecasts for a thousands of locations around the world.
 ---
 
+![Screenshot (18)](https://user-images.githubusercontent.com/70974294/104561006-6281a200-564f-11eb-815e-fe795d1fa867.png)
 
 
 ---

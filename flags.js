@@ -1,5 +1,5 @@
 function fetchFlag(country) {
-  fetch(`https://restcountries.eu/rest/v2/name/${country}`)
+  fetch(`https://restcountries.com/v3.1/name/${country}`)
     .then((response) => {
       if (!response.ok) throw new Error(response.status);
       return response.json();
@@ -7,12 +7,12 @@ function fetchFlag(country) {
     // if we get a successful response
     .then((citiesData) => {
       const country = document.createElement("h4");
-      country.textContent = citiesData[0].name;
+      country.textContent = citiesData[0].name.common;
       const population = document.createElement("p");
       population.textContent = "Population: " + citiesData[0].population;
       const flag = document.createElement("img");
       flag.classList.add("imgFg");
-      flag.src = citiesData[0].flag;
+      flag.src = citiesData[0].flags.png;
       flag.alt = "";
 
       output.appendChild(country);
